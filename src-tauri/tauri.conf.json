@@ -1,0 +1,36 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "AI Teacher",
+  "version": "0.1.0",
+  "identifier": "com.ai-teacher.app",
+  "build": {
+    "beforeDevCommand": "npm run dev:tauri",
+    "beforeBuildCommand": "npm run build",
+    "devUrl": "http://localhost:3166"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "AI Teacher",
+        "width": 600,
+        "height": 1000,
+        "resizable": true,
+        "fullscreen": false,
+        "minWidth": 400,
+        "minHeight": 600,
+        "decorations": false,
+        "shadow": false,
+        "transparent": true,
+        "visible": true,
+        "center": true
+      }
+    ],
+    "security": {
+      "csp": null
+    }
+  },
+  "bundle": {
+    "active": false
+  },
+  "plugins": {}
+}

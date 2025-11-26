@@ -1,0 +1,47 @@
+{
+  "name": "ai-teacher",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "dev:prepare": "kill-port 3166",
+    "dev:tauri": "npm run dev:prepare && npm run dev",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "tauri": "tauri",
+    "test:ocr": "powershell -ExecutionPolicy Bypass -File scripts/test-ocr-fixed.ps1",
+    "test:agent": "powershell -ExecutionPolicy Bypass -File scripts/test-agent-integration.ps1",
+    "test:agent:verbose": "powershell -ExecutionPolicy Bypass -File scripts/test-agent-integration.ps1 -Verbose",
+    "test:agent:skip-docker": "powershell -ExecutionPolicy Bypass -File scripts/test-agent-integration.ps1 -SkipDocker",
+    "test:logic": "powershell -ExecutionPolicy Bypass -File scripts/test-agent-real-logic.ps1",
+    "test:logic:verbose": "powershell -ExecutionPolicy Bypass -File scripts/test-agent-real-logic.ps1 -Verbose",
+    "test:e2e": "tsx scripts/test-agent-e2e.ts",
+    "test:e2e:mock": "tsx scripts/test-agent-e2e.ts",
+    "test:real": "tsx scripts/test-agent-real-integration.ts",
+    "test:policy": "tsx scripts/test-command-policy.ts"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.21.0",
+    "@tauri-apps/api": "^2.0.0",
+    "@tauri-apps/plugin-store": "^2.0.0",
+    "marked": "^11.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.0.0",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^7.2.0",
+    "@typescript-eslint/parser": "^7.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.6",
+    "kill-port": "^2.0.1",
+    "tsx": "^4.20.6",
+    "typescript": "^5.5.3",
+    "vite": "^5.2.0"
+  }
+}
