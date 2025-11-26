@@ -85,5 +85,8 @@ The app uses:
 
 ## License
 
-MIT
+**PROPRIETARY SOFTWARE** - All Rights Reserved.
+
+This project is provided solely for portfolio demonstration and skills showcase purposes. 
+No reproduction, use, modification, or distribution is permitted. See [LICENSE](LICENSE) for full terms.
 
