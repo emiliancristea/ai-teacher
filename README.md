@@ -1,92 +1,80 @@
 # AI Teacher
 
+> **PROPRIETARY SOFTWARE - PORTFOLIO DEMONSTRATION ONLY**
+> 
+> This repository is provided exclusively to showcase technical skills and expertise.
+> **No reproduction, use, modification, or distribution is permitted.**
+> This is NOT open source. See [LICENSE](LICENSE) for full legal terms.
+
+---
+
 An interactive AI teaching assistant built with Tauri, React, and Google Gemini. The AI can see your screen in real-time and guide you through learning tasks proactively.
 
-## Features
+## About This Project
 
-- **Real-time Screen Capture**: Continuously captures your screen to provide context-aware guidance
-- **Proactive Teaching**: Automatically detects when you complete tasks and continues with next steps
-- **Gemini Vision Integration**: Uses Google Gemini's vision capabilities to analyze your screen
-- **Chat Interface**: Beautiful, modern chat UI with markdown support
-- **Conversation Persistence**: All conversations are saved locally
-- **Customizable Settings**: Adjust capture interval, theme, and more
+This project demonstrates proficiency in:
 
-## Prerequisites
+- **Desktop Application Development** with Tauri 2.0 (Rust backend + web frontend)
+- **Modern React** with TypeScript, hooks, and component architecture
+- **AI/LLM Integration** with Google Gemini Vision API for multimodal interactions
+- **Systems Programming** in Rust for native screen capture and OCR
+- **Real-time Processing** with streaming responses and live screen analysis
+- **Security-Conscious Design** with command policy enforcement and approval workflows
 
-- Node.js (v18 or higher)
-- Rust (latest stable)
-- A Google Gemini API key ([Get one here](https://makersuite.google.com/app/apikey))
+## Technical Highlights
 
-## Setup
+### Features Demonstrated
 
-1. Install dependencies:
-```bash
-npm install
-```
+- Real-time screen capture with OCR text extraction
+- Streaming AI responses with Google Gemini Vision
+- Context-aware conversation management with token optimization
+- Command execution with policy-based approval system (auto/approval_required/blocked)
+- Cross-platform desktop app architecture (Windows focus)
+- Modern UI with dark/light themes and markdown rendering
 
-2. Configure your Gemini API key:
-   - The app will prompt you to enter your API key on first launch
-   - Or you can set it in Settings
+### Tech Stack
 
-3. Run in development mode:
-```bash
-npm run tauri dev
-```
+| Layer | Technologies |
+|-------|-------------|
+| Frontend | React 18, TypeScript, Vite 5 |
+| Backend | Tauri 2.0, Rust |
+| AI | Google Gemini API (Vision + Chat) |
+| Native | Windows PowerShell integration, OCR |
 
-4. Build for production:
-```bash
-npm run tauri build
-```
-
-## Project Structure
+### Architecture
 
 ```
 ai-teacher/
-├── src/                    # Frontend React code
-│   ├── components/        # React components
-│   ├── hooks/            # Custom React hooks
-│   ├── services/         # API and storage services
-│   └── types/            # TypeScript type definitions
-├── src-tauri/            # Tauri backend (Rust)
-│   ├── src/
-│   │   ├── commands.rs   # Tauri command handlers
-│   │   ├── screen_capture.rs  # Screen capture logic
-│   │   └── process_monitor.rs # Process monitoring
-│   └── Cargo.toml        # Rust dependencies
-└── package.json          # Node.js dependencies
+├── src/                    # React frontend
+│   ├── components/         # UI components (Chat, Settings, Messages)
+│   ├── hooks/              # Custom hooks (useChat, useScreenCapture)
+│   ├── services/           # Core logic (Gemini API, context management)
+│   └── types/              # TypeScript definitions
+├── src-tauri/              # Rust backend
+│   └── src/
+│       ├── commands.rs     # Tauri IPC command handlers
+│       ├── screen_capture.rs
+│       └── process_monitor/
+└── scripts/                # Integration tests
 ```
-
-## Usage
-
-1. Launch the app and enter your Gemini API key in Settings
-2. Start a conversation by asking the AI to help you learn something
-3. The AI will capture your screen and guide you step-by-step
-4. The AI automatically detects when you complete actions and continues guidance
-
-## Configuration
-
-- **Capture Interval**: Adjust how often screenshots are taken (1-10 seconds)
-- **Theme**: Choose between light and dark themes
-- **Conversations**: Manage, export, or delete saved conversations
-
-## Development
-
-The app uses:
-- **Frontend**: React + TypeScript + Vite
-- **Backend**: Tauri (Rust)
-- **AI**: Google Gemini API (Vision + Chat)
-- **Storage**: Tauri Store plugin
-
-## Notes
-
-- Screen capture requires appropriate permissions on your operating system
-- The app continuously monitors your screen - ensure you're comfortable with this
-- API usage will count towards your Gemini API quota
 
 ## License
 
-**PROPRIETARY SOFTWARE** - All Rights Reserved.
+**PROPRIETARY SOFTWARE** - Copyright (c) 2024-2025 Emilian Cristea. All Rights Reserved.
 
-This project is provided solely for portfolio demonstration and skills showcase purposes. 
-No reproduction, use, modification, or distribution is permitted. See [LICENSE](LICENSE) for full terms.
+This repository exists solely for the purpose of demonstrating technical skills and expertise to potential employers, clients, or collaborators.
+
+**YOU MAY NOT:**
+- Clone, fork, or reproduce this repository
+- Use, execute, or deploy this software
+- Modify or create derivative works
+- Distribute or share this code
+
+Viewing the source code for evaluation purposes only is permitted.
+
+See [LICENSE](LICENSE) for complete legal terms.
+
+---
+
+*For inquiries about this project or licensing, please contact the author directly.*
 
